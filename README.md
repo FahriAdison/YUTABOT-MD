@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://telegra.ph/file/06db0eb84b88d11d76e6a.jpg" alt="SHIRAORI BOT" width="500"/>
+<img src="https://telegra.ph/file/06db0eb84b88d11d76e6a.jpg" alt="YUTABOT" width="500"/>
 
 
 </p>
 <p align="center">
-<a href="#"><img title="SHIRAORI BOT MULTI DEVICE" src="https://img.shields.io/badge/SHIRAORI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="YUTABOT-MD" src="https://img.shields.io/badge/SHIRAORI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md"><img title="Author" src="https://img.shields.io/badge/Author-Ilman-red.svg?style=for-the-badge&logo=github"></a>
@@ -18,10 +18,10 @@
 
 ---
 
-# SHIRAORI BOT Whatsapp MD
+# YUTABOT Whatsapp MD
 ## For Users Termux Install Module [here](https://github.com/ilmanhdyt/node_modules)
 ## Information
-> ShiraoriBOT whatsapp using a Baileys library.
+> YutaBOT whatsapp using a Baileys library.
 > Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
 >
 > • NOTE: Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
@@ -107,8 +107,8 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 * Unduh & Instal ImageMagick [`Klik Disini`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/ilmanhdyt/ShiraoriBOT-Md
-cd ShiraoriBOT-Md
+git clone https://github.com/FahriAdison/YUTABOT-MD
+cd YUTABOT-MD
 npm install
 npm update
 npm index
@@ -124,8 +124,8 @@ pkg install nodejs
 pkg install ffmpeg
 pkg install imagemagick
 pkg install yarn
-git clone https://github.com/ilmanhdyt/ShiraoriBOT-Md
-cd ShiraoriBOT-Md
+git clone https://github.com/FahriAdison/YUTABOT-MD
+cd YUTABOT-MD
 yarn
 node .
 ```
@@ -159,4 +159,4 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
  Author | yg nambah fitur | yg punya sc
 
 ## Donate
-- [Saweria](https://saweria.co/ilmanhdyt)
+- [Saweria](-)
