@@ -6,13 +6,17 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
 let anu = `╭───❑ 「 BALANCE 」 ❑────
-│ ✇ Name: ${user.name}
-│ ✇ Limit: ${user.limit}
-│ ✇ Money: ${user.money}
-│ ✇ Exp: ${user.exp}
-│ ✇ Level: ${user.level}
-│ ✇ Role: ${user.role}
-╰❑`
+├─ 📇 *Name*: ${user.name}
+├─ 🆔 *Nomor* : ${require('awesome-phonenumber')(`+${m.sender.split('@')[0]}`).getNumber('international')}
+├─ 🎨 *Age* : ${user.registered ? '' + user.age : ''}
+├─ 🎫 *Limit*:${user.limit}
+├─ 💹 *Money*: ${user.money}
+├─ 📍 *Role*: ${user.role}
+├─ 💳 *Bank* : ${user.atm}
+├─ 🎟 ️ *Limit Game* : ${user.glimit}
+├─ 📊 *Level*: ${user.level}
+╰─❑ ✨ *Exp*:${user.exp}
+`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {

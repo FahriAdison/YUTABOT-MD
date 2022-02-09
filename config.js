@@ -1,6 +1,8 @@
 let fs = require('fs')
 
-global.owner = ['6281351047727'] // Put your number here
+global.kontak = ['17608914335'] //Jangan Sembarang Ganti 
+global.owner = ['17608914335','62895612153565'] // Put your number here
+global.linkGC = ['https://chat.whatsapp.com/EZT51mPq69162pfM3afL1h'] // ganti jadi group lu
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json'))
 global.APIs = { // API Prefix
@@ -11,7 +13,8 @@ global.APIs = { // API Prefix
   melcanz: 'httpa://melcanz.com',
   lol: 'https://api.lolhuman.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
-  zeks: 'https://api.zeks.xyz',
+  hardianto: 'https://hardianto.xyz',
+  zeks: 'https://api.zeks.me',
   pencarikode: 'https://pencarikode.xyz',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
@@ -19,21 +22,22 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': 'apivproject',
   'https://melcanz.com': 'elaina',
-  'https://api.lolhuman.xyz': 'pkebgk8248jskrkfm',
+  'https://api.lolhuman.xyz': 'Deffbotz',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
+  'https://hardianto.xyz': 'hardianto',
+  'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
 // Sticker WM
 global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = 'ShiraoriBOT Multi device'
-global.author = 'Ilman'
-global.email = 'wakabahiiro5@gmail.com'
+global.packname = 'Yuta Multi device'
+global.author = 'Yuta'
+global.email = 'fahriadison12@gmail.com'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
-global.wm = '© ShiraoriBOT-Md Made by Ilman'
-global.media = 'https://telegra.ph/file/5d45a3d1e12726d98c5e4.jpg'
+global.wm = '© Yuta MD\nSupported By Nekopoi.care\nMade By ẉa.me/.Yuuta-Togashi(Papah-Chan)'
+global.media = 'https://api.lolhuman.xyz/api/textprome2/glitch?apikey=Deffbotz&text1=YutaBotzMD&text2=Using%20Multi%20Device'
 
 global.wait = '_*tunggu sedang di proses...*_'
 global.eror = '_*Server Error*_'

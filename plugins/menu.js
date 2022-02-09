@@ -2,6 +2,7 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
+let moment = require('moment-timezone')
 let tags = {
   'main': 'MENU UTAMA',
   'game': 'MENU GAME',
@@ -25,38 +26,51 @@ let tags = {
   'advanced': 'ADVANCED',
   'quotes': 'MENU QUOTES',
   'info': 'MENU INFO',
+  'nulis': 'MENU NULIS',
+  
 }
+
 const defaultMenu = {
   before: `
-╭────ꕥ %me ꕥ────
-│✾ Version: %version
-│✾ Library: Baileys-MD
-│✾ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
-│✾ Runtime: %uptime
-╰❑
-╭─❑ 「 INFO USER 」 ❑──
-│ ✾ Name: %name
-│ ✾ Status: ---
-│ ✾ Limit: %limit
-│ ✾ Money: %money
-│ ✾ Exp: %totalexp
-│ ✾ Level: %level
-│ ✾ Role: %role
-╰❑
+┏━━⬣ꕥ %me ꕥ━━━━
+┃⬡📊 *Version*: %version
+┃⬡🗃️ *Lib*: Baileys-MD
+┃⬡🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
+┃⬡⏰ *Uptime:* %uptime
+┗⬣
+┏━━⬣ 𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍
+┃⬡ 📇 *Name*:  %name 
+┃⬡ 🆔 *Status*: ---
+┃⬡ 🎫 *Limit*: %limit
+┃⬡ 💹 *Money*: %money
+┃⬡ ✨ *Exp*: %totalexp
+┃⬡ 📊 *Level*: %level
+┃⬡ 📍 *Role*: %role
+┃⬡ 💲Premium : ${global.prem ? '✅' : '❌'}
+┗⬣
+┏━━⬣ 𝙄𝙉𝙁𝙊 𝙎𝙏𝘼𝙏𝙐𝙎
+┃
+┃⬡ *${Object.keys(global.db.data.users).length}* Pengguna
+┃⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+┃⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+┃
+┗⬣
 ╭─❑ 「 INFORMASI 」 ❑──
-│ Bot ini masih tahap beta
-│ apabila ada bug/eror harap
-│ lapor ke owner
-╰❑
+┃⬡ Bot ini masih beta multi device
+┃⬡ jika ada bug/delay/eror 
+┃⬡ lapor ke owner segera
+┗⬣
+
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '❏ *%category*',
+  body: '» %cmd %islimit %isPremium',
+  footer: '\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
+      
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
@@ -64,7 +78,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender 
     let user = global.db.data.users[who]
-    let { exp, limit, level, money, role } = global.db.data.users[m.sender]
+    let { exp, limit, level, money, role, prem } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -99,6 +113,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
+    
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
@@ -113,6 +128,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         enabled: !plugin.disabled,
       }
     })
+    
     for (let plugin of help)
       if (plugin && 'tags' in plugin)
         for (let tag of plugin.tags)
@@ -166,15 +182,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               displayText: 'Group Official🐦',
+               url: 'https://chat.whatsapp.com/EZT51mPq69162pfM3afL1h'
              }
 
            },
              {
              callButton: {
                displayText: 'Nomor Owner',
-               PhoneNumber: '0813-5104-7727'
+               PhoneNumber: '+1 760-891-4335'
              }
 
            },
@@ -194,8 +210,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            },
            {
              quickReplyButton: {
-               displayText: '📍 Credits',
-               id: '.tqto',
+               displayText: '📍 Info Owner',
+               id: '.infoowner',
              }
            }]
          }
@@ -212,6 +228,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     throw e
   }
 }
+
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu)$/i

@@ -7,7 +7,9 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let fs = require('fs')
 let handler = async (m) => {
 let esce = `
-Bot ini Menggunakan Script Dari
+Ngapain Bang,Kepo Ya Cek SC Siapa
+Nih Aku Pakai SC Ini
+Lalu Ku Recode Dan Build👌🐦
 
 https://github.com/ilmanhdyt/ShiraoriBOT-Md`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -46,5 +48,3 @@ handler.tags = ['info']
 handler.command = /^(sc|sourcecode)$/i
 
 module.exports = handler
-
-

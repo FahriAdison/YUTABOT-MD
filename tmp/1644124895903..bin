@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Growtopia Game - Page not found [404]</title>
+        <link rel="icon" type="image/png" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" sizes="16x16" />
+                <link rel="shortcut icon" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" type="image/x-icon">
+                <link rel="icon" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" type="image/x-icon">
+                <link media="all" rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/custom.css">
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: table;
+                /* The image used */
+                font-family: CenturyGothicBold;
+                            background-image: url( https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/404_bg.png);
+
+                            /* Full height */
+                            height: 100%;
+
+                            /* Center and scale the image nicely */
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            color: #fff;
+            }
+
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .text {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+            .title {
+                font-size: 275px;
+                text-shadow: -8px 8px 0px #006f88;
+            }
+            a {
+            text-decoration: none;
+            color: #f15b22;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="title">404</div>
+                <div class="text">This page does not exist</div>
+                <div class="text"><a href="https://www.growtopiagame.com">Home page</a></div>
+            </div>
+        </div>
+    </body>
+</html>
+

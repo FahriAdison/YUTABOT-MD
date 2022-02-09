@@ -7,7 +7,7 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
 let premium = `
-*SHIRAORI BOT PRICE*
+*Kasumi BOT PRICE*
 
 ◩ *FREE USER*
 └───────
@@ -19,9 +19,9 @@ let premium = `
 └───────
  └✅ Unlimited Limit 
  └✅ Premium User 
- └❎ Add Bot to Group 
-   └  ▹  *Rp. 5.000*
-     └ Expired 3 hari
+ └✅ Add Bot to Group 
+   └  ▹  *Rp. 0*
+     └ Expired No
  └ Order | hub : owner
 `
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -33,8 +33,8 @@ let premium = `
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'DONASI',
-               url: 'https://saweria.co/ilmanhdyt'
+               displayText: 'Group Official',
+               url: 'https://chat.whatsapp.com/EZT51mPq69162pfM3afL1h'
              }
 
            },

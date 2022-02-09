@@ -83,9 +83,9 @@ let handler = async (m, { conn, text }) => {
 	} else throw `Tunggu *${cd1}:${cd2}* Untuk Memancing Lagi`
 }
 
-handler.help = ['fish']
+handler.help = ['fishing']
 handler.tags = ['rpg']
-handler.command = /^fish/i
+handler.command = /^fishing/i
 handler.fishingrod = 1
 
 

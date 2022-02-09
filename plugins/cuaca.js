@@ -8,8 +8,8 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukan Nama Daerah', m)
 
   await m.reply('Searching...')
-	axios.get(`https://api.xteam.xyz/cuaca?kota=${text}&APIKEY=uhdahlah`).then ((res) => {
-	 	let hasil = `Cuaca Daerah *${text}*\n\nTempat : ${res.data.message.kota}\nAngin : ${res.data.message.angin}\nCuaca : ${res.data.message.cuaca}\nDeskripsi : ${res.data.message.deskripsi}\nKelembapan : ${res.data.message.kelembapan}\nSuhu : ${res.data.message.suhu}\nUdara : ${res.data.message.pressure}`
+	axios.get(`https://api.lolhuman.xyz/api/cuaca/${text}?apikey=Deffbotz`).then ((res) => {
+	 	let hasil = `Cuaca Daerah *${text}*\n\nTempat : ${res.data.tempat}\nAngin : ${res.data.angin}\nCuaca : ${res.data.cuaca}\nDeskripsi : ${res.data.description}\nKelembapan : ${res.data.kelembapan}\nSuhu : ${res.data.suhu}\nUdara : ${res.data.udara}\nPermukaan laut :${res.data.permukaan_laut}`
 
     conn.reply(m.chat, hasil, m)
 	})

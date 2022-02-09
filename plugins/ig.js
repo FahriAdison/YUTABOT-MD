@@ -9,12 +9,12 @@ instagramdl(args[0]).then(async res => {
     let json = JSON.parse(instagramdl)
     for (let { url, type } of json) {
       await delay(1500)
-      conn.sendFile(m.chat, url, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), '*© SHIRAORIBOT*', m, { thumbnail: Buffer.alloc(0) })
+      conn.sendFile(m.chat, url, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), '*© Yuta MD*', m, { thumbnail: Buffer.alloc(0) })
     }
   })
 }
 handler.help = ['ig'].map(v => v + ' <url>')
-handler.tags = ['download']
+handler.tags = ['downloader']
 handler.command = /^(ig|igdl|instagram)$/i
 handler.limit = true
 handler.premium = false

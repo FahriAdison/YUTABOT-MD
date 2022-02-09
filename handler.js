@@ -46,16 +46,29 @@ module.exports = {
                     if (!isNumber(user.healt)) user.healt = 100
                     if (!isNumber(user.limit)) user.limit = 0
                     if (!isNumber(user.potion)) user.potion = 0
+                    if (!('pasangan' in user)) user.pasangan = ''
+                    if (!isNumber(user.glimit)) user.glimit = 20
+                    if (!isNumber(user.trofi)) user.trofi= 0
+            if (!user.rtrofi) user.rtrofi = 'Perunggu'
                     if (!isNumber(user.sampah)) user.sampah = 0
                     if (!isNumber(user.kayu)) user.kayu = 0
+                    if (!('kingdom' in user)) user.kingdom = false
                     if (!isNumber(user.batu)) user.batu = 0
                     if (!isNumber(user.string)) user.string = 0
                     if (!isNumber(user.petFood)) user.petFood = 0
                     if (!isNumber(user.makananpet)) user.makananpet = 0
+                    if (!isNumber(user.atm)) user.atm = 0
+                    if (!isNumber(user.tprem)) user.tprem = 0
+                    if (!isNumber(user.pertanian)) user.pertanian = 0
+            if (!isNumber(user.pertambangan)) user.pertambangan = 0
+            if (!isNumber(user.rumahsakit)) user.rumahsakit= 0
+            if (!isNumber(user.troopcamp)) user.troopcamp = 0
+            if (!isNumber(user.fortress)) user.fortress = 0
 
                     if (!isNumber(user.emerald)) user.emerald = 0
                     if (!isNumber(user.diamond)) user.diamond = 0
                     if (!isNumber(user.gold)) user.gold = 0
+                    if (!isNumber(user.emas)) user.emas = 0
                     if (!isNumber(user.iron)) user.iron = 0
 
                     if (!isNumber(user.common)) user.common = 0
@@ -87,15 +100,31 @@ module.exports = {
                     if (!isNumber(user.fishingrod)) user.fishingrod = 0
                     if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
 
+                    if (!isNumber(user.paus)) user.paus = 0
+            if (!isNumber(user.kepiting)) user.kepiting = 0
+            if (!isNumber(user.gurita)) user.gurita = 0
+            if (!isNumber(user.cumi)) user.cumi= 0
+            if (!isNumber(user.buntal)) user.buntal = 0
+            if (!isNumber(user.dory)) user.dory = 0
+            if (!isNumber(user.lumba)) user.lumba = 0
+            if (!isNumber(user.lobster)) user.lobster = 0
+            if (!isNumber(user.hiu)) user.hiu = 0
+            if (!isNumber(user.udang)) user.udang = 0
+            if (!isNumber(user.ikan)) user.ikan = 0
+            if (!isNumber(user.orca)) user.orca = 0
+
                     if (!isNumber(user.lastclaim)) user.lastclaim = 0
                     if (!isNumber(user.lastadventure)) user.lastadventure = 0
                     if (!isNumber(user.lastfishing)) user.lastfishing = 0
                     if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
                     if (!isNumber(user.lastduel)) user.lastduel = 0
+                    if (!isNumber(user.lastrob)) user.lastrob = 0
                     if (!isNumber(user.lastmining)) user.lastmining = 0
                     if (!isNumber(user.lasthunt)) user.lasthunt = 0
                     if (!isNumber(user.lastweekly)) user.lastweekly = 0
                     if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
+                    if (!isNumber(user.lastbansos)) user.lastbansos = 0
+                    if (!isNumber(user.lastduel)) user.lastduel = 0
                     
                     if (!isNumber(user.warning)) user.warning = 0
                 } else global.db.data.users[m.sender] = {
@@ -110,6 +139,7 @@ module.exports = {
                     afkReason: '',
                     banned: false,
                     warn: 0,
+                    pasangan: '',
                     level: 0,
                     role: 'Beginner',
                     autolevelup: true,
@@ -162,6 +192,7 @@ module.exports = {
                     lastfishing: 0,
                     lastdungeon: 0,
                     lastduel: 0,
+                    lastrob: 0,
                     lastmining: 0,
                     lasthunt: 0,
                     lastweekly: 0,
