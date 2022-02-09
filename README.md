@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://telegra.ph/file/06db0eb84b88d11d76e6a.jpg" alt="YUTABOT" width="500"/>
+<img src="https://pbs.twimg.com/media/BkYSZ2_CcAASCNd.jpg" alt="YUTABOT" width="500"/>
 
 
 </p>
 <p align="center">
-<a href="#"><img title="YUTABOT-MD" src="https://img.shields.io/badge/SHIRAORI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="YUTABOT-MD" src="https://img.shields.io/badge/YUTABOT-MD-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/ilmanhdyt/ShiraoriBOT-Md"><img title="Author" src="https://img.shields.io/badge/Author-Ilman-red.svg?style=for-the-badge&logo=github"></a>
